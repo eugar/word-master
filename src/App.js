@@ -146,9 +146,9 @@ function App() {
 
   // returns an array with a boolean of if the word is valid and an error message if it is not
   const isValidWord = (word) => {
-    if (word.length < 5) return [false, `please enter a 5 letter word`]
+    if (word.length < 5) return [false]
     if (difficultyLevel === difficulty.easy) return [true]
-    if (!words[word.toLowerCase()]) return [false, `${word} is not a valid word. Please try again.`]
+    if (!words[word.toLowerCase()]) return [false]
     if (difficultyLevel === difficulty.normal) return [true]
     const guessedLetters = Object.entries(letterStatuses).filter(([letter, letterStatus]) =>
       [status.yellow, status.green].includes(letterStatus)
