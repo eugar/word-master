@@ -167,7 +167,6 @@ function App() {
     const [valid, err] = isValidWord(word)
     if (!valid) {
       setSubmittedInvalidWord(true)
-      alert(err)
       return
     }
 
